@@ -414,14 +414,17 @@ function SwapCard() {
             });
 
             return { ...token, balance: balance };
-          } else {
-            const balance = await fetchBalance({
-              address,
-              chainId: chain?.id,
-            });
-
-            return { ...token, balance: balance };
           }
+
+          return token;
+          // } else {
+          //   const balance = await fetchBalance({
+          //     address,
+          //     chainId: chain?.id,
+          //   });
+
+          //   return { ...token, balance: balance };
+          // }
         })
       );
 
